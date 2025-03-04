@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full height of the browser */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.box-intro {
+    background: white;
+    width: 100%;
+    max-width: 350px;
+    margin: 50px auto 10px;
+    height: 200px;
+    border-radius: 10px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    display: flex; /* Use flexbox for positioning */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center text */
+    gap: 20px; /* Space between image and text */
+}
+
+.box-intro img {
+    width: 80px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+}
+
+.quote {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    margin: -50px;
+}
+
+.start {
+    display: block;
+    background: green;
+    margin-top: 120px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 90px;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+/* Change background color on hover */
+.start:hover,
+.navigation button:hover,
+.main-btn:hover {
+    background: black;
+    color: white;
+}
+
+.quiz-container {
+    display: none; /* Hidden at start */
+    text-align: center;
+    padding: 20px;
+}
+
+.question-container {
+    display: none;
+}
+
+.question-container.active {
+    display: block;
+}
+
+.question-box {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto; /* Center the question box */
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    font-size: 55%;
+    text-align: center;
+}
+.options-container {
+    margin-top: 20px;
+}
+
+.option-btn {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.navigation button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: green;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.results-container {
+    text-align: center;
+    display: none;
+    color: yellow;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.results-container h1 {
+    margin-bottom: 10px;
+}
+
+.main-btn {
+    margin: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: green;
+    font-weight: bold;
+    border: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.footer {
+    position: absolute;
+    bottom: 2px;
+    width: 50%;
+    right: 2px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 128, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+@media (max-width: 600px) {
+    .box-intro {
+        font-size: 1.5rem; /* Reduce text size */
+        padding: 15px;
+    }
+
+    .quote {
+        font-size: 10px; /* Adjust smaller for readability */
+    }
+
+    .start, .navigation button {
+        width: 80%; /* Make buttons wider for touch screens */
+        font-size: 1.2rem;
+    }
+}
